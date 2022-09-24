@@ -6,7 +6,7 @@ namespace QazandiranBonusCardSystem.Models.Entities
     {
         public BaseEntity()
         {
-            Id = Guid.NewGuid();
+           // Id = Guid.NewGuid();
         }
         public Guid Id { get; set; }
     }

@@ -34,7 +34,8 @@ namespace QazandiranBonusCardSystem.Controllers
             var _user = await _dbContext.Users.Include(u=>u.Cards).FirstOrDefaultAsync(u => u.Id == dto.Userid);
             if(_user==null)
                 return NotFound();
-            _user.Cards.Add(new Card());
+            var card = new Card();
+            _user.Cards.Add(card);            
             await _dbContext.SaveChangesAsync();
             return Ok();
         }

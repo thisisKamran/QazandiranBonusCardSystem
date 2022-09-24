@@ -42,6 +42,7 @@ namespace QazandiranBonusCardSystem.Controllers
         {
             var _user = new User { Firstname = dto.Firstname, Lastname = dto.Lastname };
             await _dbContext.Users.AddAsync(_user);
+            await _dbContext.SaveChangesAsync();
             return Ok();
         }
     }
