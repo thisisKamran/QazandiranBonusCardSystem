@@ -24,6 +24,7 @@ namespace QazandiranBonusCardSystem.Controllers
         [HttpGet]
         public async Task<ActionResult<List<User>>> GetAll()
         {
+            
             var _users = await _dbContext.Users.ToListAsync();
             return Ok(_users);
         }
